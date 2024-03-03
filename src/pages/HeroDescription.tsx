@@ -38,7 +38,7 @@ export const HeroDescriptionPage: React.FC = () => {
 
         <div className="hero-desc-comics-wrapper">
           {selectedHeroeComics.map((comic: any) => (
-            <div>
+            <div key={comic.id}>
               <img src={`${comic.thumbnail?.path}.${comic.thumbnail?.extension}`} />
               <p>{comic.title}</p>
               <p>{parseDate(comic.dates[0].date)}</p>
