@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./HeroCard.scss";
 import { FavButton } from "../FavButton/FavButton";
+import { MyContext } from "../../context";
 export interface HeroCardProps {
   hero: any;
 }
 
 export const HeroCard: React.FC<HeroCardProps> = ({ hero }) => {
+  const { setSelectedHeroe } = useContext(MyContext);
+
   const [loadedImg, setLoadedImg] = useState(false);
   const navigate = useNavigate();
 
@@ -19,6 +22,7 @@ export const HeroCard: React.FC<HeroCardProps> = ({ hero }) => {
       <img
         className="hero-card-img"
         onClick={() => {
+          setSelectedHeroe(hero);
           navigate(`/description/${hero.id}`);
         }}
         style={{
