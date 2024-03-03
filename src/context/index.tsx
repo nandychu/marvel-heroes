@@ -9,12 +9,21 @@ export const MyProvider = ({ children }) => {
   const [favHeroes, setFavHeroes] = useState<any>([]);
   const [selectedHeroe, setSelectedHeroe] = useState<any>(null);
   const [selectedHeroeComics, setSelectedHeroeComics] = useState([]);
+  const [heroSearchValue, setHeroSearchValue] = useState("");
 
   useEffect(() => {
-    fetchMarvelHeroes().then((heroes: any) => {
+    triggerFetchHeroes();
+  }, []);
+
+  useEffect(() => {
+    triggerFetchHeroes(heroSearchValue);
+  }, [heroSearchValue]);
+
+  function triggerFetchHeroes(nameSearch?: string) {
+    fetchMarvelHeroes(nameSearch).then((heroes: any) => {
       setHeroes(heroes);
     });
-  }, []);
+  }
 
   useEffect(() => {
     if (selectedHeroe && selectedHeroe.id) {
@@ -34,7 +43,19 @@ export const MyProvider = ({ children }) => {
   }
 
   return (
-    <MyContext.Provider value={{ heroes, favHeroes, selectedHeroe, selectedHeroeComics, addFav, removeFav, setSelectedHeroe }}>
+    <MyContext.Provider
+      value={{
+        heroes,
+        favHeroes,
+        selectedHeroe,
+        selectedHeroeComics,
+        heroSearchValue,
+        addFav,
+        removeFav,
+        setSelectedHeroe,
+        setHeroSearchValue,
+      }}
+    >
       {children}
     </MyContext.Provider>
   );
