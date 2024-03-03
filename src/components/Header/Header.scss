@@ -1,0 +1,13 @@
+.banner {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  span {
+    margin-left: 6px;
+  }
+}

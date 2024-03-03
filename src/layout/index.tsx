@@ -1,5 +1,6 @@
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Header } from "../components/Header/Header";
 type Props = {};
 
 const pageTransition = {
@@ -29,6 +30,7 @@ export const Layout: React.FC<Props> = () => {
 
   return (
     <div className="App">
+      <Header></Header>
       <motion.div
         key={location.pathname}
         initial="initial"
