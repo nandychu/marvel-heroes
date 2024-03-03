@@ -1,0 +1,58 @@
+.heroe-desc-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-height: 500;
+  align-items: center;
+}
+
+.heroe-desc-wrapper {
+  background-color: black;
+  clip-path: polygon(0px 0px, 100% 0px, 100% 0px, 100% 92%, 98% 100%, 0px 100%, 0px 100%, 0px 0px);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: white;
+}
+
+.heroe-desc-wrapper > div {
+  display: flex;
+  width: 60%;
+}
+
+.heroe-desc-wrapper > div > img {
+  width: 320px;
+  height: 320px;
+}
+
+.hero-desc-name {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.heroe-desc-header {
+  display: flex;
+  width: 60%;
+}
+
+.heroe-desc-header h2 {
+  text-align: left;
+}
+
+.hero-desc-comics-wrapper {
+  display: flex;
+  overflow-x: auto;
+  width: 60%;
+  scroll-behavior: smooth;
+}
+
+.hero-desc-comics-wrapper > div {
+  margin-right: 18px;
+  text-align: start;
+  color: black;
+}
+
+.hero-desc-comics-wrapper > div > img {
+  width: 180px;
+  height: 270px;
+}
