@@ -8,6 +8,11 @@ type Route = {
 };
 
 export const routes: Route[] = [
+  {
+    label: "Heroes",
+    path: "/heroes",
+    element: import("./pages/Heroes").then(({ HeroesPage }) => HeroesPage),
+  },
 ];
 
 const router = createBrowserRouter([
