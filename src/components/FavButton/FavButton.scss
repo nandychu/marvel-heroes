@@ -2,8 +2,19 @@
   position: absolute;
   right: 18px;
 }
+.fav-button-wrapper.desc-align {
+  position: unset;
+  right: unset;
+  margin-left: 20px;
+}
+
+.fav-button-wrapper.desc-align .fav-img{
+  width: 26px;
+  height: 26px;
+}
 
 .fav-img {
+  cursor: pointer;
   width: 18px;
   height: 18px;
   transition: opacity 0.3s ease-in-out;
