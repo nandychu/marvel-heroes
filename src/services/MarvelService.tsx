@@ -8,7 +8,6 @@ const generateCredentials = () => {
   const timestamp = Date.now();
 
   const hash = md5(timestamp + privateKey + publicKey);
-  console.log(import.meta.env);
   return { timestamp, publicKey, hash };
 };
 
@@ -21,7 +20,6 @@ export const fetchMarvelHeroes = async (searchName?: string) => {
     }`
   );
   const responseData: any = await response.json();
-  console.log("data", responseData.data.results);
   return responseData.data.results;
 };
 

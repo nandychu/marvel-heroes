@@ -3,7 +3,7 @@ import { MyContext } from "../../context";
 import "./FavButton.scss";
 export interface FavButtonProps {
   hero: any;
-  descriptionStyles?: boolean
+  descriptionStyles?: boolean;
 }
 
 export const FavButton: React.FC<FavButtonProps> = ({ hero, descriptionStyles }) => {
@@ -15,7 +15,7 @@ export const FavButton: React.FC<FavButtonProps> = ({ hero, descriptionStyles })
   }
 
   return (
-    <a className={`fav-button-wrapper ${descriptionStyles && 'desc-align'}`}>
+    <a className={`fav-button-wrapper ${descriptionStyles && "desc-align"}`}>
       <div
         onClick={() => {
           addFav(hero);
@@ -42,7 +42,6 @@ export const FavButton: React.FC<FavButtonProps> = ({ hero, descriptionStyles })
       <div
         className="fav-img"
         onClick={() => {
-          console.log("addfav");
           removeFav(hero.id);
         }}
         style={{

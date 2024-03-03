@@ -10,7 +10,9 @@ export const SearchBar: React.FC = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setHeroSearchValue(searchValue);
+      if (searchValue !== undefined) {
+        setHeroSearchValue(searchValue);
+      }
     }, 500);
 
     return () => {
