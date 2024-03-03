@@ -11,6 +11,13 @@
     margin-left: 6px;
   }
 
+  a {
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
   @include mq($xxs) {
     position: sticky;
     top: 0;
