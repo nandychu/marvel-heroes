@@ -1,3 +1,5 @@
+@import "../styles/variables.scss";
+
 .heroe-desc-container {
   display: flex;
   flex-direction: column;
@@ -13,6 +15,21 @@
   justify-content: center;
   width: 100%;
   color: white;
+
+  @include mq($xxs) {
+    clip-path: polygon(0px 0px, 100% 0px, 100% 0px, 100% 96%, 94% 100%, 0px 100%, 0px 100%, 0px 0px);
+  }
+
+  @include mq($xs) {
+    clip-path: polygon(0px 0px, 100% 0px, 100% 0px, 100% 92%, 96% 100%, 0px 100%, 0px 100%, 0px 0px);
+
+  }
+  @include mq($md) {
+    clip-path: polygon(0px 0px, 100% 0px, 100% 0px, 100% 92%, 96% 100%, 0px 100%, 0px 100%, 0px 0px);
+  }
+  @include mq($lg) {
+    clip-path: polygon(0px 0px, 100% 0px, 100% 0px, 100% 92%, 98% 100%, 0px 100%, 0px 100%, 0px 0px);
+  }
 }
 
 .heroe-desc-wrapper > div {
@@ -20,19 +37,65 @@
   width: 60%;
 }
 
+.heroe-desc-wrapper > div {
+  display: flex;
+  width: 60%;
+
+  @include mq($xxs) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @include mq($xs) {
+    flex-direction: row;
+    width: 60%;
+  }
+
+  @include mq($md) {
+    flex-direction: row;
+    width: 60%;
+  }
+}
+
 .heroe-desc-wrapper > div > img {
-  width: 320px;
-  height: 320px;
+  @include mq($xxs) {
+    width: 100%;
+    height: auto;
+  }
+
+  @include mq($xs) {
+    width: 320px;
+    height: 320px;
+  }
+
 }
 
 .hero-desc-name {
   font-size: 40px;
   text-transform: uppercase;
+  @include mq($xxs) {
+    font-size: 32px;
+  }
 }
 
 .heroe-desc-header {
   display: flex;
   width: 60%;
+
+  @include mq($xxs) {
+    width: 100%;
+    padding-left: 32px;
+  }
+
+  @include mq($xs) {
+    width: 80%;
+  }
+  @include mq($md) {
+    width: 80%;
+  }
+  @include mq($lg) {
+    width: 60%;
+  }
 }
 
 .heroe-desc-header h2 {
@@ -44,6 +107,21 @@
   overflow-x: auto;
   width: 60%;
   scroll-behavior: smooth;
+
+  @include mq($xxs) {
+    width: 100%;
+    padding-left: 32px;
+  }
+
+  @include mq($xs) {
+    width: 80%;
+  }
+  @include mq($md) {
+    width: 80%;
+  }
+  @include mq($lg) {
+    width: 60%;
+  }
 }
 
 .hero-desc-comics-wrapper > div {
@@ -55,4 +133,20 @@
 .hero-desc-comics-wrapper > div > img {
   width: 180px;
   height: 270px;
+}
+
+.heroe-desc-name-header {
+  text-align: start;
+  margin-left: 52px;
+
+  @include mq($xxs) {
+    margin: 0px 28px;
+    margin-bottom: 28px;
+  }
+}
+
+.heroe-desc-name-header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

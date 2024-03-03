@@ -22,10 +22,10 @@ export const HeroDescriptionPage: React.FC = () => {
           <div className="heroe-desc-wrapper">
             <div>
               <img src={`${selectedHeroe.thumbnail?.path}.${selectedHeroe.thumbnail?.extension}`} />
-              <div style={{ textAlign: "start", marginLeft: 52 }}>
+              <div className="heroe-desc-name-header">
                 <div>
                   <p className="hero-desc-name">{selectedHeroe.name}</p>
-                  <FavButton hero={selectedHeroe}></FavButton>
+                  <FavButton descriptionStyles={true} hero={selectedHeroe}></FavButton>
                 </div>
                 <p>{selectedHeroe.description}</p>
               </div>

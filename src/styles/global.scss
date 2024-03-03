@@ -76,3 +76,33 @@ body {
     opacity: 1;
   }
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: red;
+}
+
+::-moz-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #ddd;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: red;
+}
+
+::-ms-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #ddd;
+}
+
+::-ms-scrollbar-thumb {
+  background-color: red;
+}

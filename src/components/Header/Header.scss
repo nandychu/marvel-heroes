@@ -1,13 +1,28 @@
+@import "../../styles/variables.scss";
+
 .banner {
   background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 12px 50px;
 
   span {
     margin-left: 6px;
+  }
+
+  @include mq($xxs) {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 12px 14px;
+  }
+
+  @include mq($xs) {
+    padding: 12px 28px;
+
+  }
+  @include mq($md) {
+    padding: 12px 50px;
   }
 }
