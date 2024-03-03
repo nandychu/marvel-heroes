@@ -10,6 +10,9 @@ export const FavButton: React.FC<FavButtonProps> = ({ hero, descriptionStyles })
   const { addFav, removeFav, favHeroes } = useContext(MyContext);
 
   function isFav(itemId: any) {
+    if (!favHeroes) {
+      return false;
+    }
     const exists = favHeroes.some((fav: any) => fav.id === itemId);
     return exists;
   }
@@ -17,6 +20,7 @@ export const FavButton: React.FC<FavButtonProps> = ({ hero, descriptionStyles })
   return (
     <a className={`fav-button-wrapper ${descriptionStyles && "desc-align"}`}>
       <div
+      data-testid="fav-img-set"
         onClick={() => {
           addFav(hero);
         }}
@@ -40,6 +44,8 @@ export const FavButton: React.FC<FavButtonProps> = ({ hero, descriptionStyles })
       </div>
 
       <div
+            data-testid="fav-img-unset"
+
         className="fav-img"
         onClick={() => {
           removeFav(hero.id);

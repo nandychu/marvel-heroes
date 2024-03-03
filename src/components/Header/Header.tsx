@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
 
   return (
     <div className="banner">
-      <img style={{ cursor: "pointer" }} onClick={() => navigate("/heroes")} src={marvelLogo} />
+      <img  alt="Marvel Logo" style={{ cursor: "pointer" }} onClick={() => navigate("/heroes")} src={marvelLogo} />
 
       <a onClick={() => navigate("/favs")} style={{ color: "white", display: "flex", alignItems: "center" }}>
         <img src={fav}></img>
