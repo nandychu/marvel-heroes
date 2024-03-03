@@ -3,11 +3,11 @@ import fav from "../../assets/fav.png";
 
 import "./Header.scss";
 import { useContext } from "react";
-import { MyContext } from "../../App";
 import { useNavigate } from "react-router-dom";
+import { MyContext } from "../../context";
 
 export const Header: React.FC = () => {
-  const { favs } = useContext(MyContext);
+  const { favHeroes } = useContext(MyContext);
   const navigate = useNavigate();
 
   return (
@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
 
       <a onClick={() => navigate("/favs")} style={{ color: "white", display: "flex", alignItems: "center" }}>
         <img src={fav}></img>
-        <span>{favs && favs.length}</span>
+        <span>{favHeroes && favHeroes.length}</span>
       </a>
     </div>
   );
