@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+.slidep-enter {
+  transform: translateY(-1500px);
+}
+
+.slidep-enter-active {
+  transform: translateY(0);
+  transition: transform 1500ms ease-out;
+}
+
+.slidep-exit {
+  transform: translateY(0);
+}
+
+.slidep-exit-active {
+  transform: translateY(-1500px);
+  transition: transform 1500ms ease-out;
+}
+
+.search-container {
+  position: relative;
+  width: calc(100% - 40px);
+  margin: 20px 20px;
+  padding: 12px 0;
+}
+
+.search-input {
+  background-color: white;
+  width: calc(100% - 50px);
+  padding-left: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-size: 16px;
+  color: black;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  z-index: 1;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
