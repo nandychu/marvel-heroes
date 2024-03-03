@@ -1,5 +1,5 @@
 import { HeroCard } from "../HeroCard/HeroCard";
-
+import './HeroesGrid.scss'
 export interface HeroesGridProps {
   heroes: [];
 }
