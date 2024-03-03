@@ -9,7 +9,7 @@ export const HeroesGrid: React.FC<HeroesGridProps> = (props) => {
 
   return (
     <div className="heroes-grid-container">
-      {heroes && heroes.length > 0 && heroes.map((el: any) => <HeroCard hero={el}></HeroCard>)}
+      {heroes && heroes.length > 0 && heroes.map((el: any) => <HeroCard key={el.id} hero={el}></HeroCard>)}
     </div>
   );
 };

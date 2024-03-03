@@ -1,5 +1,5 @@
 import marvelLogo from "../../assets/logo.png";
-import fav from "../../assets/fav.png";
+import fav from "../../assets/fav.svg";
 
 import "./Header.scss";
 import { useContext } from "react";

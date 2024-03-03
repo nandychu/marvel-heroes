@@ -8,3 +8,11 @@
   height: 18px;
   transition: opacity 0.3s ease-in-out;
 }
+
+.fav-img-set > path {
+  fill: red;
+}
+
+.fav-img-unset > path {
+  fill: white;
+}

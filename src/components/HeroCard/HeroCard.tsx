@@ -33,8 +33,8 @@ export const HeroCard: React.FC<HeroCardProps> = ({ hero }) => {
         alt="Imagen"
       />
 
-      <div className="nameWrapper">
-        <div className="nameWrapperInner">
+      <div className="name-wrapper">
+        <div className="name-wrapper-inner">
           <span>{hero.name}</span>
           <FavButton hero={hero}></FavButton>
         </div>
