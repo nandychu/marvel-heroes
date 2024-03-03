@@ -1,26 +1,29 @@
 .search-container {
   position: relative;
-  width: calc(100% - 40px);
-  margin: 20px 20px;
-  padding: 12px 0px;
+  margin: 20px 60px;
+  width: auto;
 }
 
-.search-input > input {
+.search-input > div > input {
   background-color: white;
   width: calc(100% - 50px);
-  padding-left: 30px;
   border: none;
   border-bottom: 1px solid black;
   outline: none;
   font-size: 16px;
   color: black;
 }
-
-.search-container > img {
+.search-container > div > img {
   position: absolute;
   left: 10px;
-  top: 50%;
+  top: 24%;
   transform: translateY(-50%);
   color: black;
   z-index: 1;
 }
+
+.search-container > p {
+  text-align: start;
+  margin-left: 8px;
+}
+

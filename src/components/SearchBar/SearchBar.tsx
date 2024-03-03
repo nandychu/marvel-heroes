@@ -6,7 +6,7 @@ import "./SearchBar.scss";
 export const SearchBar: React.FC = () => {
   const [searchValue, setSearchValue] = useState("");
 
-  const { heroSearchValue, setHeroSearchValue } = useContext(MyContext);
+  const { heroSearchValue, setHeroSearchValue, heroes } = useContext(MyContext);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -30,14 +30,17 @@ export const SearchBar: React.FC = () => {
 
   return (
     <div className="search-container">
-      <input
-        value={searchValue}
-        onChange={handleInputChange}
-        type="text"
-        className="search-input"
-        placeholder="Buscar..."
-      />
-      <img src={SearchIcon} />
+      <div>
+        <input
+          value={searchValue}
+          onChange={handleInputChange}
+          type="text"
+          className="search-input"
+          placeholder="Buscar..."
+        />
+        <img src={SearchIcon} />
+      </div>
+      <p>{heroes.length} RESULTS</p>
     </div>
   );
 };
