@@ -13,6 +13,16 @@ export const routes: Route[] = [
     path: "/heroes",
     element: import("./pages/Heroes").then(({ HeroesPage }) => HeroesPage),
   },
+  {
+    label: "Description",
+    path: "/description/:heroeId",
+    element: import("./pages/HeroDescription").then(({ HeroDescriptionPage }) => HeroDescriptionPage),
+  },
+  {
+    label: "Favorites",
+    path: "/favs",
+    element: import("./pages/Favs").then(({ FavsPage }) => FavsPage),
+  },
 ];
 
 const router = createBrowserRouter([
