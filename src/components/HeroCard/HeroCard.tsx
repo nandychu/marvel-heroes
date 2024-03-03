@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './HeroCard.scss'
+import "./HeroCard.scss";
+import { FavButton } from "../FavButton/FavButton";
 export interface HeroCardProps {
   hero: any;
 }
@@ -31,6 +32,7 @@ export const HeroCard: React.FC<HeroCardProps> = ({ hero }) => {
       <div className="nameWrapper">
         <div className="nameWrapperInner">
           <span>{hero.name}</span>
+          <FavButton hero={hero}></FavButton>
         </div>
       </div>
     </div>
