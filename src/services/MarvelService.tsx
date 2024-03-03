@@ -3,11 +3,12 @@ import md5 from "md5";
 const MARVEL_URL = "https://gateway.marvel.com/v1/public";
 
 const generateCredentials = () => {
-  const privateKey = import.meta.env.MARVEL_PRIVATE_KEY;
-  const publicKey = import.meta.env.MARVEL_PUBLIC_KEY;
+  const privateKey = import.meta.env.VITE_MARVEL_PRIVATE_KEY;
+  const publicKey = import.meta.env.VITE_MARVEL_PUBLIC_KEY;
   const timestamp = Date.now();
 
   const hash = md5(timestamp + privateKey + publicKey);
+  console.log(import.meta.env);
   return { timestamp, publicKey, hash };
 };
 

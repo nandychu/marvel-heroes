@@ -1,8 +1,17 @@
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
+import { fetchMarvelHeroes } from "../services/MarvelService";
 
 export const MyContext = createContext({} as any);
 
 //@ts-ignore
 export const MyProvider = ({ children }) => {
-  return <MyContext.Provider value={{}}>{children}</MyContext.Provider>;
+  const [heroes, setHeroes] = useState([]);
+
+  useEffect(() => {
+    fetchMarvelHeroes().then((heroes: any) => {
+      setHeroes(heroes);
+    });
+  }, []);
+
+  return <MyContext.Provider value={{ heroes }}>{children}</MyContext.Provider>;
 };
